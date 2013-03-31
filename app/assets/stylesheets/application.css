@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+ 
+ html{
+   background-color:#000;
+ }
+ .hello{
+   padding-top:100px;
+   font-size:50px;
+   text-align:center;
+   -webkit-animation: hover-change linear 1s infinite;
+   -moz-animation: hover-change linear 1s infinite;
+ }
+ 
+ @-webkit-keyframes hover-change {
+   0%   {color: cyan;}
+   25%  {color: magenta;}
+   50%  {color: yellow;}
+   100% {color: white;}
+ }
+
+ @-moz-keyframes hover-change {
+   0%   {color: cyan;}
+   25%  {color: magenta;}
+   50%  {color: yellow;}
+   100% {color: white;}
+ }

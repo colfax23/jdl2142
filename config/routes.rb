@@ -1,4 +1,6 @@
 Jdl2142::Application.routes.draw do
+  
+  match "/home" => "pages#home", :via => :get
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
