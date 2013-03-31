@@ -5,7 +5,7 @@ Rails project for Columbia Coms3101 - ROR
 App Overview
 ====
 
-Rails
+Ruby
 ----
 This project uses ruby2.0.0-p0. 
 
