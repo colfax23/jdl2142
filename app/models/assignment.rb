@@ -4,6 +4,6 @@ class Assignment
   belongs_to :lecture
   has_many :uploads, as: :uploadable
   
-  field :date, type: Timestamp
+  field :date, type: DateTime
   field :text, type: String
 end
