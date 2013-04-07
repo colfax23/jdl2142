@@ -1,7 +1,10 @@
 class User
-  field :username, type: String
-  field :firstname, type: String
-  field :llastname, type: String
+  include Mongoid::Document
+  
+  has_many :uploads
+  has_many :courses
+  
+  field :first_name, type: String
+  field :last_name, type: String
   field :email, type: String
-  filed :age, type: Integer
 end
