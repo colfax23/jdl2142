@@ -1,8 +1,8 @@
 class User
   include Mongoid::Document
   
-  has_many :uploads
-  has_many :courses
+  has_many :uploads, as: :uploadable
+  has_and_belongs_to_many :courses
   
   field :first_name, type: String
   field :last_name, type: String
