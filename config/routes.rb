@@ -4,10 +4,15 @@ Jdl2142::Application.routes.draw do
 
   resources :courses
 
+  resource :session#, :only => [:new, :create, :destroy]
+
   match "signup" => "users#new", :as => "signup"
   match "login" => "sessions#new", :as => "login"
   match "logout" => "sessions#destroy", :as => "logout"
   match "home" => "pages#home", :via => :get
+  root :to => 'welcome#index'
+  
+#  root :to => redirect("/prepayments")
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
