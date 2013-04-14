@@ -1,6 +1,13 @@
 Jdl2142::Application.routes.draw do
-  
-  match "/home" => "pages#home", :via => :get
+    
+  resources :users
+
+  resources :courses
+
+  match "signup" => "users#new", :as => "signup"
+  match "login" => "sessions#new", :as => "login"
+  match "logout" => "sessions#destroy", :as => "logout"
+  match "home" => "pages#home", :via => :get
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
