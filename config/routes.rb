@@ -10,7 +10,7 @@ Jdl2142::Application.routes.draw do
   match "login" => "sessions#new", :as => "login"
   match "logout" => "sessions#destroy", :as => "logout"
   match "home" => "pages#home", :via => :get
-  root :to => 'welcome#index'
+  root :to => "pages#home"#'welcome#index'
   
 #  root :to => redirect("/prepayments")
   # The priority is based upon order of creation:

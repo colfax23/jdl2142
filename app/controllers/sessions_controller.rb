@@ -5,18 +5,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email])
+    user = User.find_by(email: params[:session][:email])    
     if user
       session[:user_id] = user.id
-      redirect_to courses_path
+      redirect_to users_url,  :notice => "Logged in!"
     else
       render "new"
     end  
   end
 
   def destroy
-    reset_session
-    redirect_to root_url
+    session[:user_id] = nil
+    redirect_to root_url, :notice => "Logged out!"
   end
 
 end
