@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem "mongoid", "~> 3.0.0"
+
+gem "bcrypt-ruby", :require => "bcrypt"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
