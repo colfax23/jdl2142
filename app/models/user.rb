@@ -8,6 +8,7 @@ class User
   field :first_name, type: String
   field :last_name, type: String
   field :email, type: String
+  field :role, type: String
   field :password_hash, type: String 
   field :password_salt, type: String
   field :password_digest, :type => String
@@ -20,6 +21,12 @@ class User
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email 
+   
+  before_save :default_values
+
+  def default_values
+    self.role ||= "student"
+  end
    
   def self.find_by_email(email)
     where(:email => email).first
