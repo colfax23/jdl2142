@@ -1,3 +1,6 @@
-<a href="/signup">sign up!</a>
-<a href="/login">login</a>
-<a href="/logout">logout</a>
+<% if current_user.present? %>
+	<a href="/logout">logout</a>
+<% else %>
+	<a href="/signup">sign up!</a>
+	<a href="/login">login</a>
+<% end %>

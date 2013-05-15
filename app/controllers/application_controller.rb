@@ -14,6 +14,13 @@ class ApplicationController < ActionController::Base
        redirect_to root_url
     end
   end
+  
+  def is_admin
+    if  (@current_user.role == "Admin") && (@current_user != nil)
+      return true
+    end
+    redirect_to root_url
+  end
     
 
 end
