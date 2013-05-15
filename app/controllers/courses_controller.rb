@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_filter :is_admin, :only => [:edit]
   # GET /courses
   # GET /courses.json
   def index
