@@ -1,1 +1,5 @@
-<div class="hello">HELLO, WORLD</div>
+<ul>
+  <% for course in @current_user.courses %>
+    <li><%= course %></li>
+  <% end %>
+</ul>
