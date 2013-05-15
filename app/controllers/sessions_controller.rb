@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 #    if User.authenticate(params[:email], params[:password])
     if User.authenticate(params[:session][:email], params[:session][:password])
       session[:user_id] = user.id
-      redirect_to users_url,  :notice => "Logged in!"
+      redirect_to '/home',  :notice => "Logged in!"
     else
       render "new"
     end  

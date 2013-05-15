@@ -4,11 +4,12 @@ class Course
   has_and_belongs_to_many :users
   has_many :lectures
 
-  field :call_num, type: Integer
-  field :course_title, type: String
-  field :start_time, type: DateTime
-  field :end_time, type: DateTime
-  field :meets_on, type: String
-  field :room, type: String
-  field :instructor, type: String
+  field :CourseTitle, type: String
+  field :CallNumber, type: String
+  field :StartTime1, type: String
+  field :EndTime1, type: String  
+  field :MeetsOn1, type: String    
+  field :Building1, type: String      
+  field :Room1, type: String        
+  field :Instructor1Name, type: String
 end
