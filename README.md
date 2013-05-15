@@ -12,5 +12,7 @@ This project uses ruby2.0.0-p0.
 MongoDB
 ----
 This project uses MongoDB for a backend.
-    
-    
+
+FinalProject
+----
+I allowed users to change their passwords as well as included bootstrap
